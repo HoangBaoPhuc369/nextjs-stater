@@ -1,12 +1,14 @@
+'use client';
+
+import _ from 'lodash';
 import Image from 'next/image';
 
 export default function Home() {
-    const name = 'World';
-
+    const name = 'World';   
+    const string = _.concat('Hello', ' ', name);
     return (
         <>
-            <div className="h1-bold">Hello World</div>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
+            <div className="h1-bold">{string}</div>
         </>
     );
 }
